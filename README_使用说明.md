@@ -11,7 +11,7 @@
 把 `3D-TissueMap-Instance-Segmentation-v1.0-Freezer-Update.zip` 放到 `3D-TissueMap-AI/` 的**父目录**，然后：
 
 ```bash
-cd "/media/sophie/Data2T/3D-TissueMap AI/3D-TissueMap-AI"
+cd "${PROJECT_ROOT}"
 conda activate tempodino
 unzip -o "../3D-TissueMap-Instance-Segmentation-v1.0-Freezer-Update.zip" -d .
 python -m pytest -q tests/test_freeze_instance_release.py

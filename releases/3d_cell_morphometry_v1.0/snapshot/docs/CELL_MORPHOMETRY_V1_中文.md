@@ -11,7 +11,7 @@
 把 `3D-TissueMap-Cell-Morphometry-v1-Update.zip` 放在项目父目录。Ubuntu 运行：
 
 ```bash
-cd "/media/sophie/Data2T/3D-TissueMap AI/3D-TissueMap-AI"
+cd "${PROJECT_ROOT}"
 conda activate tempodino
 unzip -n "../3D-TissueMap-Cell-Morphometry-v1-Update.zip" -d .
 python -m pytest -q tests/test_cell_morphometry_v1.py

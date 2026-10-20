@@ -19,7 +19,7 @@
 将 ZIP 放到项目父目录，进入项目根目录：
 
 ```bash
-cd "/media/sophie/Data2T/3D-TissueMap AI/3D-TissueMap-AI"
+cd "${PROJECT_ROOT}"
 conda activate tempodino
 unzip -o "../3D-TissueMap-Learned-RAG-Integration-Update.zip" -d .
 python -m pytest -q tests/test_learned_region_graph.py

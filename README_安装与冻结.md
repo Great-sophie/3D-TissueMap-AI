@@ -7,7 +7,7 @@
 将下载的 ZIP 放在项目的**父目录**，然后执行：
 
 ```bash
-cd "/media/sophie/Data2T/3D-TissueMap AI/3D-TissueMap-AI"
+cd "${PROJECT_ROOT}"
 conda activate tempodino
 unzip -n "../3D-TissueMap-Workflow10-v1.0-Freeze-Update.zip" -d .
 python -m pytest -q tests/test_freeze_workflow10.py
