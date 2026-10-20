@@ -1,0 +1,47 @@
+# scientific data, per-object measurements and caches
+/data/
+/runs/
+/_archive/
+/raw/
+/outputs/
+/artifacts/
+/checkpoints/
+/models/
+*.ome.tif
+*.ome.tiff
+*.tif
+*.tiff
+*.zip
+*.7z
+*.tar
+*.tar.gz
+*.zarr
+*.h5
+*.hdf5
+*.npy
+*.npz
+*.parquet
+*.feather
+*.pt
+*.pth
+*.ckpt
+*.nii
+*.nii.gz
+# secrets and local IDE files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.ipynb_checkpoints/
+.DS_Store
+.idea/
+.vscode/
+# log files
+*.log

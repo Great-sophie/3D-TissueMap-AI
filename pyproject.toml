@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "3d-tissuemap-ai"
+version = "0.1.0"
+description = "An auditable 3D segmentation and multiplexed spatial-protein analysis research prototype"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "scipy>=1.11", "pandas>=2.0", "torch>=2.1", "tifffile>=2023.7", "matplotlib>=3.7"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+tissuemap = "tissuemap.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
