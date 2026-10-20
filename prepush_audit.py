@@ -8,6 +8,11 @@ import struct
 BAD_SUFFIXES = {'.tif','.tiff','.zip','.7z','.h5','.hdf5','.pt','.pth','.ckpt','.npy','.npz','.parquet','.nii','.pem','.key','.p12'}
 BAD_DIRS = {'data','runs','_archive','checkpoints','raw','models','outputs','node_modules','.venv'}
 MAX_BYTES = 1024*1024
+VIEWER_LIMITS = {
+    'docs/viewers/roi_voxel_viewer.html': 20*1024*1024,
+    'docs/viewers/centroid_marker_viewer.html': 20*1024*1024,
+}
+
 PERMITTED_PNG = {
     'assets/results/z_sampling.png',
     'assets/results/transfer_auroc.png',
@@ -40,7 +45,7 @@ def main():
         rel=path.relative_to(root)
         name=rel.as_posix()
         n+=1
-        if path.is_symlink() or any(s in BAD_DIRS for s in rel.parts[:-1]) or path.suffix.lower() in BAD_SUFFIXES or path.stat().st_size>MAX_BYTES or path.name.startswith('.env'):
+        if path.is_symlink() or any(s in BAD_DIRS for s in rel.parts[:-1]) or path.suffix.lower() in BAD_SUFFIXES or path.stat().st_size>VIEWER_LIMITS.get(name,MAX_BYTES) or path.name.startswith('.env'):
             violations.append((name,'restricted file type, symlink, directory, or >1 MB'))
             continue
         if path.suffix.lower()=='.png':

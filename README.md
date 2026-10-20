@@ -91,3 +91,18 @@ See the experiment protocol and paper for exact claims and limitations.
 
 **No software license is granted by this repository unless the owner adds one.**
 Third-party IMC datasets and associated masks retain their original data terms.
+
+<!-- 3D_VIEWERS_START -->
+## Interactive 3D tissue viewers
+
+Explore the reconstructed imaging mass cytometry tissue using two browser-based viewers. These are **research visualizations**, not manual ground-truth cell segmentations.
+
+| Interactive tool | Description | Launch |
+|---|---|---|
+| 3D ROI voxel viewer | Voxel-based 3D tissue visualization | [Open viewer](https://great-sophie.github.io/3D-TissueMap-AI/viewers/roi_voxel_viewer.html) |
+| 3D centroid and marker viewer | 3D spatial pseudo-instances and protein-marker visualization | [Open viewer](https://great-sophie.github.io/3D-TissueMap-AI/viewers/centroid_marker_viewer.html) |
+
+**[Open the 3D viewer gallery](https://great-sophie.github.io/3D-TissueMap-AI/viewers/index.html)** · [Viewer documentation](docs/VIEWERS.md)
+
+> The interactive HTML files are distributed as static pages. The underlying 3D pseudo-instance geometry does not constitute independently validated cell ground truth. Marker labels and redistribution rights require verification.
+<!-- 3D_VIEWERS_END -->
